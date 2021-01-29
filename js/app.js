@@ -4,9 +4,7 @@ console.log('Hello World');
 
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-let cookies = [];
-let numberCookies = (cookies + 'Cookies');
-console.log(numberCookies);
+
 
 var seattleList = document.getElementById('Seattle');
 var parisList = document.getElementById('Paris');
@@ -41,7 +39,6 @@ let seattle = {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       seattleList.appendChild(li);
-      let li = document.createElement('li');
       li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
       seattleList.appendChild(li);
       // dont forget to change location this list as well.
@@ -77,7 +74,6 @@ let paris = {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       parisList.appendChild(li);
-      let li = document.createElement('li');
       li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
       parisList.appendChild(li);
       // dont forget to change location this list as well.
