@@ -84,6 +84,12 @@ let paris = {
     }
   }
 }
+
+
+
 seattle.render();
 paris.render();
+toyko.render();
+dubai.render();
+lima.render();
 // Other locations .render
