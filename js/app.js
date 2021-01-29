@@ -8,6 +8,12 @@ let cookies = [];
 let numberCookies = (cookies + 'Cookies');
 console.log(numberCookies);
 
+var seattleList = document.getElementById('Seattle');
+var toykoList = document.getElementById('Toyko');
+var dubaiList = document.getElementById('Dubai');
+var parisList = document.getElementById('Paris');
+var limaList = document.getElementById('Lima');
+
 let seattle = {
   name: 'Seattle',
   minCustEachHour: 23,
@@ -21,19 +27,27 @@ let seattle = {
   },
 
   calcCookiesSoldEachHour: function () {
-    let randoCustThisHour = this.randoCustEachHour();
-    console.log(randoCustThisHour);
-    console.log('i am inside of calcCookiesSoldEachHour');
-    // do something using a for loop
-    // inside of for loop (multiply customer number by average)
-    // handle the number, Round up or down. 
-    // proof of life
-    // push into the array (cookiesSoldPerHourArray)
+    for (let i = 0; i < hours.length; i++) {
+      let randoCustThisHour = this.randoCustEachHour();
+      let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
+      this.cookiesSoldEachHour.push(hourlyTotal);
+      this.dailyStoreTotal += hourlyTotal;
+    }
   },
 
   rendor: function () {
     this.calcCookiesSoldEachHour();
-    console.log('I am inside of the render function');
+
+    for (let i = 0; 1 < hours.length; i++) {
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
+      seattleList.appendChild(li);
+    }
+      let li = document.createElement('li');
+      li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
+      seattleList.appendChild(li);
+      // dont forget to change location this list as well.
   }
 };
 seattle.render();
+// Other locations .render
