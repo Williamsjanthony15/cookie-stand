@@ -1,4 +1,95 @@
-.seattle {
+* {
   background-color: palegoldenrod;
   
 }
+
+tr1 {
+  color: black;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+#seattle {
+  color: red;
+  border: 20px thick dotted;
+  
+}
+
+/* td1 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td2 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td3 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td4 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td5 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td6 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td7 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td8 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td9 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td10 {
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td11{
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td12{
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+}
+td13{
+  color: rgb(253, 11, 11);
+  margin: auto;
+  margin-left: 10px;
+
+} */
