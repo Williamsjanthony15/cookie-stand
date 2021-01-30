@@ -14,11 +14,11 @@ let cookieSales = document.getElementById('Cookie Sales');
 const allStores = [];
 console.log(cookieSales);
 
-function Seattle(name, minCustEachHour, maxCustEachHour, avgCookiesSoldPerCustomer) {
+function Seattle (name) {
 this.name = name;
-this.minCustEachHour = 23;
-this.maxCustEachHour = 65;
-this.avgCookiesSoldPerCustomer = 6.3;
+this.minCustEachHour = [];
+this.maxCustEachHour = [];
+this.avgCookiesSoldPerCustomer = [];
 this.cookiesSoldEachHour = [];
 this.dailyLocationTotal = 0;
 allStores.push(this);
@@ -26,7 +26,7 @@ console.log('testing');
 }
 
 Seattle.prototype.calcLocTotal = function() {
-  for ( let i = 0; i < this.cookiesSoldEachHour.length; i++){ this.dailyLocationTotal += this.cookiesSoldEachHour[i];
+  for (let i = 0; i < this.cookiesSoldEachHour.length; i++){ this.dailyLocationTotal += this.cookiesSoldEachHour[i];
   }
 };
 
@@ -49,7 +49,7 @@ Seattle.prototype.render = function() {
   tr.appendChild(td);
 };
 
-let seattleStoreOne = new Seattle('Seattle', [23, 65, 6.3]);
+let seattleStore = new Seattle('Seattle', [i]);
 
 function renderAll(){
   for (let i = 0; i < allStores.length; i++){
