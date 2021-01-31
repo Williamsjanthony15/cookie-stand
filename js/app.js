@@ -70,7 +70,7 @@ let paris = {
 
   render: function () {
     this.calcCookiesSoldEachHour();
-    for (let i = 0; 1 < hours.length; i++) {
+    for (let i = 0; i < hours.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       parisList.appendChild(li);
@@ -82,9 +82,9 @@ let paris = {
 
 let toyko = {
   name: 'toyko',
-  minCustEachHour: 20,
-  maxCustEachHour: 38,
-  avgCookiesSoldPerCustomer: 2.3,
+  minCustEachHour: 3,
+  maxCustEachHour: 24,
+  avgCookiesSoldPerCustomer: 1.2,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
   renderCustEachHour: function () {
@@ -103,7 +103,7 @@ let toyko = {
 
   render: function () {
     this.calcCookiesSoldEachHour();
-    for (let i = 0; 1 < hours.length; i++) {
+    for (let i = 0; i < hours.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       toykoList.appendChild(li);
@@ -115,9 +115,9 @@ let toyko = {
 
 let dubai = {
   name: 'Dubai',
-  minCustEachHour: 20,
+  minCustEachHour: 11,
   maxCustEachHour: 38,
-  avgCookiesSoldPerCustomer: 2.3,
+  avgCookiesSoldPerCustomer: 3.7,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
   renderCustEachHour: function () {
@@ -136,7 +136,7 @@ let dubai = {
 
   render: function () {
     this.calcCookiesSoldEachHour();
-    for (let i = 0; 1 < hours.length; i++) {
+    for (let i = 0; i < hours.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       dubaiList.appendChild(li);
@@ -148,9 +148,9 @@ let dubai = {
 
 let lima = {
   name: 'Lima',
-  minCustEachHour: 20,
-  maxCustEachHour: 38,
-  avgCookiesSoldPerCustomer: 2.3,
+  minCustEachHour: 2,
+  maxCustEachHour: 16,
+  avgCookiesSoldPerCustomer: 4.6,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
   renderCustEachHour: function () {
@@ -169,7 +169,7 @@ let lima = {
 
   render: function () {
     this.calcCookiesSoldEachHour();
-    for (let i = 0; 1 < hours.length; i++) {
+    for (let i = 0; i < hours.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       limaList.appendChild(li);
