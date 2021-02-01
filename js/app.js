@@ -4,86 +4,102 @@ console.log('Hello World');
 
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
-
-let cookieSales = document.getElementById('Cookie Sales');
-// let parisList = document.getElementById('paris');
-// let toykoList = document.getElementById('toyko');
-// let dubaiList = document.getElementById('dubai');
-// let limaList = document.getElementById('lima');
 const allStores = [];
-console.log(cookieSales);
 
-function Seattle (name) {
-this.name = name;
-this.minCustEachHour = [];
-this.maxCustEachHour = [];
-this.avgCookiesSoldPerCustomer = [];
-this.cookiesSoldEachHour = [];
-this.dailyLocationTotal = 0;
-allStores.push(this);
-console.log('testing');
+
+function Store(location, minCustHour, maxCustHour, avgSoldCust) {
+  this.location = location;
+  this.minCustHour = minCustHour;
+  this.maxCustHour = maxCustHour;
+  this.avgSoldCust = avgSoldCust;
+  this.hourlyTotal = [];
+  this.dailyLocationTotal = 0;
+  this.hourlyTotal();
+  this.renderStores();
+  storeArray.push(this);
+}
+Store.prototype.ranCustHour = function () {
+  return Math.floor(Math.random() = (this.maxCustHour - this.minCustHour) + 1) + this.minCustHour;
 }
 
-Seattle.prototype.calcLocTotal = function() {
-  for (let i = 0; i < this.cookiesSoldEachHour.length; i++){ this.dailyLocationTotal += this.cookiesSoldEachHour[i];
+Store.prototype.calcLocTotal = function () {
+  for (let i = 0; i < hours.length; i++) {
+    let customer = this.ranCustHour();
+    let sales = Math.ceil(customer * this.avgSoldCust);
+    this.hourlyTotal.push(sales);
+    this.dailyLocationTotal += sales;
   }
-};
+}
 
-Seattle.prototype.render = function() {
+Store.prototype.renderStores = function () {
+  let body = document.getElementById('body');
   let tr = document.createElement('tr');
-  cookieSales.appendChild(tr);
-
   let th = document.createElement('th');
-  th.textContent = this.name;
+  th.textContent = this.location;
   tr.appendChild(th);
-
-  for (let i = 0; i < this.cookiesSoldEachHour.length; i++) {
-    this.dailyLocationTotal += this.cookiesSoldEachHour[i];
+  for (let i = 0; i < this.hourlyTotal.length; i++) {
     let td = document.createElement('td');
-    td.textContent = this.cookiesSoldEachHour[i];
-    tr.appendChild(td);
+    td.textContent = this.hourlyTotal(i);
+    tr.appendChild(td); 
   }
+  th = document.createElement('th');
+  th.textContent = this.dailyLocationTotal;
+  tr.appendChild(th);
+}
+
+
+function renderHeader() {
+  let head = document.getElementById('cookieHead');
   let td = document.createElement('td');
-  td.textContent = this.dailyLocationTotal;
-  tr.appendChild(td);
-};
-
-let seattleStore = new Seattle('Seattle', [i]);
-
-function renderAll(){
-  for (let i = 0; i < allStores.length; i++){
-    allStores[i].render();
+  td.textContent = 'Location';
+  head.appendChild(td);
+  for (let i = 0; i < hours.length; i++); {
+    td = document.createElement('td');
+    td.textContent = hours[i];
+    head.appendChild(td);
   }
 }
-renderAll();
-//   let th = document.createElement('tr');
-//   th.textContent = this.name;
-//   tr.appendChild(th);
-  
-// for (let i = 0; i < this.)
-  
-// }
-// let seattle = {
-//   name: 'Seattle',
-//   minCustEachHour: 23,
-//   maxCustEachHour: 65,
-//   avgCookiesSoldPerCustomer: 6.3,
-//   cookiesSoldEachHour: [],
-//   dailyLocationTotal: 0,
-//   randoCustEachHour: function () {
-//     console.log('im in randoCustEachHour');
-//     return Math.floor(Math.random() * (this.maxCustEachHour - this.minCustEachHour + 1) + this.minCustEachHour);
-//   },
 
-//   calcCookiesSoldEachHour: function () {
-//     for (let i = 0; i < hours.length; i++) {
-//       let randoCustThisHour = this.randoCustEachHour();
-//       let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
-//       this.cookiesSoldEachHour.push(hourlyTotal);
-//       this.dailyLocationTotal += hourlyTotal;
-//     }
-//   },
+renderHeader();
+new Store('Seattle', 23, 65, 6.3);
+
+
+  // 4 functions total
+  // 3 prototypes 1 is function
+
+  // prototype ...
+  // one random cust per hours
+  // one cookies per hour and total 
+  // one store content to table 
+
+  // function ...
+  // renders header row on the table.
+
+  ////////////////////////////////////////////////
+
+  //   let th = document.createElement('tr');
+  //   th.textContent = this.name;
+  //   tr.appendChild(th);
+
+  // for (let i = 0; i < this.)
+
+  // }
+  // let seattle = {
+  //   name: 'Seattle',
+  //   minCustEachHour: 23,
+  //   maxCustEachHour: 65,
+  //   avgCookiesSoldPerCustomer: 6.3,
+  //   cookiesSoldEachHour: [],
+  //   dailyLocationTotal: 0,
+
+  // calcCookiesSoldEachHour: function () {
+  //   for (let i = 0; i < hours.length; i++) {
+  //     let randoCustThisHour = this.randoCustEachHour();
+  //     let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
+  //     this.cookiesSoldEachHour.push(hourlyTotal);
+  //     this.dailyLocationTotal += hourlyTotal;
+  //   }
+  // },
 
 //   render: function () {
 //     this.calcCookiesSoldEachHour();
