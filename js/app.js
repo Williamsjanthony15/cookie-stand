@@ -46,7 +46,6 @@ let seattle = {
   }
 }
 
-
 let paris = {
   name: 'Paris',
   minCustEachHour: 20,
@@ -54,14 +53,14 @@ let paris = {
   avgCookiesSoldPerCustomer: 2.3,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
-  renderCustEachHour: function () {
+  randoCustEachHour: function () {
     console.log('im in randoCustEachHour');
     return Math.floor(Math.random() * (this.maxCustEachHour - this.minCustEachHour + 1) + this.minCustEachHour);
   },
 
   calcCookiesSoldEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
-      let randoCustThisHour = this.renderCustEachHour();
+      let randoCustThisHour = this.randoCustEachHour();
       let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
       this.cookiesSoldEachHour.push(hourlyTotal);
       this.dailyStoreTotal += hourlyTotal;
@@ -74,27 +73,28 @@ let paris = {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       parisList.appendChild(li);
-      li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
-      parisList.appendChild(li);
     }
+    let li = document.createElement('li');
+    li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
+    parisList.appendChild(li);
   }
 }
 
 let toyko = {
-  name: 'toyko',
+  name: 'Toyko',
   minCustEachHour: 3,
   maxCustEachHour: 24,
   avgCookiesSoldPerCustomer: 1.2,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
-  renderCustEachHour: function () {
+  randoCustEachHour: function () {
     console.log('im in randoCustEachHour');
     return Math.floor(Math.random() * (this.maxCustEachHour - this.minCustEachHour + 1) + this.minCustEachHour);
   },
 
   calcCookiesSoldEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
-      let randoCustThisHour = this.renderCustEachHour();
+      let randoCustThisHour = this.randoCustEachHour();
       let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
       this.cookiesSoldEachHour.push(hourlyTotal);
       this.dailyStoreTotal += hourlyTotal;
@@ -107,9 +107,10 @@ let toyko = {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       toykoList.appendChild(li);
-      li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
-      toykoList.appendChild(li);
     }
+    let li = document.createElement('li');
+    li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
+    toykoList.appendChild(li);
   }
 }
 
@@ -120,14 +121,14 @@ let dubai = {
   avgCookiesSoldPerCustomer: 3.7,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
-  renderCustEachHour: function () {
+  randoCustEachHour: function () {
     console.log('im in randoCustEachHour');
     return Math.floor(Math.random() * (this.maxCustEachHour - this.minCustEachHour + 1) + this.minCustEachHour);
   },
 
   calcCookiesSoldEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
-      let randoCustThisHour = this.renderCustEachHour();
+      let randoCustThisHour = this.randoCustEachHour();
       let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
       this.cookiesSoldEachHour.push(hourlyTotal);
       this.dailyStoreTotal += hourlyTotal;
@@ -140,9 +141,10 @@ let dubai = {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       dubaiList.appendChild(li);
-      li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
-      dubaiList.appendChild(li);
     }
+    let li = document.createElement('li');
+    li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
+   dubaiList.appendChild(li);
   }
 }
 
@@ -153,14 +155,14 @@ let lima = {
   avgCookiesSoldPerCustomer: 4.6,
   cookiesSoldEachHour: [],
   dailyStoreTotal: 0,
-  renderCustEachHour: function () {
+  randoCustEachHour: function () {
     console.log('im in randoCustEachHour');
     return Math.floor(Math.random() * (this.maxCustEachHour - this.minCustEachHour + 1) + this.minCustEachHour);
   },
 
   calcCookiesSoldEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
-      let randoCustThisHour = this.renderCustEachHour();
+      let randoCustThisHour = this.randoCustEachHour();
       let hourlyTotal = Math.ceil(randoCustThisHour * this.avgCookiesSoldPerCustomer);
       this.cookiesSoldEachHour.push(hourlyTotal);
       this.dailyStoreTotal += hourlyTotal;
@@ -173,17 +175,12 @@ let lima = {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
       limaList.appendChild(li);
-      li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
-      limaList.appendChild(li);
     }
+    let li = document.createElement('li');
+    li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
+    limaList.appendChild(li);
   }
 }
-
-
-
-
-
-
 seattle.render();
 paris.render();
 toyko.render();
