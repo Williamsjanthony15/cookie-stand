@@ -50,22 +50,13 @@ Store.prototype.renderStores = function () {
   body.appendChild(tr);
 }
 
-
-function renderHeader() {
-  let head = document.getElementById('cookieHead');
-  let td = document.createElement('td');
-  td.textContent = ' ';
-  head.appendChild(td);
-  for (let i = 0; i < hours.length; i++) {
-    td = document.createElement('td');
-    td.textContent = hours[i];
-    head.appendChild(td);
-  };
-}
-
 renderHeader();
 new Store('Seattle', 23, 65, 6.3);
 new Store('Paris', 20, 38, 2.3);
 new Store('Toyko', 3 ,24, 1.2);
 new Store('Lime', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);
+=======
+
+
+
