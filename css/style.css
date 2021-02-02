@@ -3,93 +3,33 @@
   
 }
 
-tr1 {
-  color: black;
-  margin-left: 100px;
-  margin-bottom: 10px;
-}
 
 #seattle {
   color: red;
-  border: 20px thick dotted;
-  
+  border: 20px solid black;
 }
 
-/* td1 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
+#cookieSales {
+  border: 5px solid black;
+  color: black;
+  margin-left: 200px;
+  padding: 10px;
 
 }
-td2 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
+#cookieHead {
+  border: 1px solid black;
+  color: black;
+  border: 10px;
 }
-td3 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
 
+#storeLocations {
+  border: 1px solid black;
+  color: black;
+  border: 10px;
 }
-td4 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
 
+#foot {
+  border: 1px solid black;
+  color: black;
+  border: 10px;
 }
-td5 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td6 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td7 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td8 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td9 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td10 {
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td11{
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td12{
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-}
-td13{
-  color: rgb(253, 11, 11);
-  margin: auto;
-  margin-left: 10px;
-
-} */
