@@ -3,9 +3,8 @@
 console.log('Hello World');
 
 
-const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
+const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Grand Total'];
 const allStores = [];
-
 
 function Store(location, minCustHour, maxCustHour, avgSoldCust) {
   this.location = location;
@@ -25,7 +24,7 @@ Store.prototype.ranCustHour = function () {
 }
 
 Store.prototype.calcLocTotal = function () {
-  for (let i = 0; i < hours.length; i++) {
+  for (let i = 0; i < hours.length - 1; i++) {
     let customer = this.ranCustHour();
     let sales = Math.ceil(customer * this.avgSoldCust);
     this.hourlyTotal.push(sales);
@@ -53,19 +52,20 @@ Store.prototype.renderStores = function () {
 function renderHeader() {
   let head = document.getElementById('cookieHead');
   let td = document.createElement('td');
-  td.textContent = 'Location';
-  td.textContent = ' ';
+  td.textContent = '';
   head.appendChild(td);
   for (let i = 0; i < hours.length; i++) {
     td = document.createElement('td');
     td.textContent = hours[i];
     head.appendChild(td);
   };
+  // td = document.createElement('td');
+  // td.textContent = ;
   }
 
 renderHeader();
 new Store('Seattle', 23, 65, 6.3);
 new Store('Paris', 20, 38, 2.3);
 new Store('Toyko', 3 ,24, 1.2);
-new Store('Lime', 2, 16, 4.6);
+new Store('Lima', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);

@@ -1,35 +1,29 @@
 * {
   background-color: palegoldenrod;
-  
+
+}
+h1 {
+  text-align: center;
+  font-size: large;
+}
+thead, tbody, tr, td {
+  border:1px solid black;
+  /* padding: 30px */
+  text-align: center;
+  text-indent: 20px;
+  padding:5px;
 }
 
+thead {
+  font-style: italic;
+}
 
-#seattle {
+tbody {
   color: red;
-  border: 20px solid black;
+  font-style: italic;
+  font-size: xx-large;
 }
 
-#cookieSales {
-  border: 5px solid black;
+td {
   color: black;
-  margin-left: 200px;
-  padding: 10px;
-
-}
-#cookieHead {
-  border: 1px solid black;
-  color: black;
-  border: 10px;
-}
-
-#storeLocations {
-  border: 1px solid black;
-  color: black;
-  border: 10px;
-}
-
-#foot {
-  border: 1px solid black;
-  color: black;
-  border: 10px;
 }
