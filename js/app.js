@@ -6,11 +6,11 @@ console.log('Hello World');
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 
-var seattleList = document.getElementById('seattle');
-var parisList = document.getElementById('paris');
-var toykoList = document.getElementById('toyko');
-var dubaiList = document.getElementById('dubai');
-var limaList = document.getElementById('lima');
+let seattleList = document.getElementById('seattle');
+let parisList = document.getElementById('paris');
+let tokyoList = document.getElementById('tokyo');
+let dubaiList = document.getElementById('dubai');
+let limaList = document.getElementById('lima');
 
 let seattle = {
   name: 'Seattle',
@@ -80,8 +80,8 @@ let paris = {
   }
 }
 
-let toyko = {
-  name: 'Toyko',
+let tokyo = {
+  name: 'Tokyo',
   minCustEachHour: 3,
   maxCustEachHour: 24,
   avgCookiesSoldPerCustomer: 1.2,
@@ -106,11 +106,11 @@ let toyko = {
     for (let i = 0; i < hours.length; i++) {
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${this.cookiesSoldEachHour[i]}`;
-      toykoList.appendChild(li);
+      tokyoList.appendChild(li);
     }
     let li = document.createElement('li');
     li.textContent = `Total: ${this.dailyStoreTotal} cookies`;
-    toykoList.appendChild(li);
+    tokyoList.appendChild(li);
   }
 }
 
@@ -183,6 +183,6 @@ let lima = {
 }
 seattle.render();
 paris.render();
-toyko.render();
+tokyo.render();
 dubai.render();
 lima.render();
