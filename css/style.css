@@ -3,10 +3,11 @@
 
 }
 h1 {
+  font-family: 'Ubuntu', sans-serif;
   text-align: center;
   font-size: large;
 }
-thead, tbody, tr, td {
+thead, tbody, tr, td, tfoot {
   border:1px solid black;
   /* padding: 30px */
   text-align: center;
