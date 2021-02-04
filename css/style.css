@@ -29,6 +29,11 @@ td {
   color: black;
 }
 
+#title {
+  font-size: 100px;
+  margin-top: 100px;
+}
+
 #salmon {
   width: 400px;
   height: 200px;
@@ -97,25 +102,33 @@ td {
 
 #lima {
   font-size: 25px;
-  margin-top: 50px;
-  margin-left: 45px;
+  margin-top: 100px;
+  margin-left: 30px;
   max-width: 300px;
   text-align: center;
   float: left;
 }
+#family {
+  margin-left:450px;
+  width: 450px;
+  height: 350px;
+  /* margin-top: px; */
+  margin-bottom: 100px;
+}
 #dubai {
   font-size: 25px;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-right: 50px;
   max-width: 300px;
   text-align: center;
   float: right;
 }
 
-#family {
-  margin-left:435px;
-  width: 400px;
-  height: 250px;
-  margin-top: 50px;
+#href {
+  font-size: 50px;
+  font-style: italic;
+  text-decoration: none;
+  text-emphasis: none;
+  text-align: center;
 }
 
