@@ -1,5 +1,5 @@
 * {
-  background-color: palegoldenrod;
+  background-color: lightgrey
 
 }
 h1 {
@@ -28,3 +28,94 @@ tbody {
 td {
   color: black;
 }
+
+#salmon {
+  width: 400px;
+  height: 200px;
+  float: left;
+}
+#chinook {
+  width: 400px;;
+  height: 200px;
+  float:right;
+}
+
+#seattle {
+  font-size: 25px;
+  margin-top: 10em;
+  margin-left: 450px;
+  max-width: 500px;
+  text-align: center;
+  
+}
+#paris {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 450px;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+#frosted {
+  margin-left: 100px;
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+  float: left;
+}
+#cutter {
+  margin-top: 50px;
+  margin-right: 100px;
+  width: 250px;
+  height: 250px;
+  float: right;
+}
+
+#fish {
+  margin-top: 150px;
+  margin-left: 75px;
+  margin-right: 50px;
+  width: 250px;
+  height: 250px;
+}
+
+#shirt {
+  margin-top: 50px;
+  width: 250px;
+  height: 250px;
+}
+
+#toyko {
+  font-size: 25px;
+  margin-top: 100px;
+  margin-left: 450px;
+  max-width: 500px;
+  text-align: center;
+}
+
+
+#lima {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 45px;
+  max-width: 300px;
+  text-align: center;
+  float: left;
+}
+#dubai {
+  font-size: 25px;
+  margin-top: 50px;
+  margin-right: 50px;
+  max-width: 300px;
+  text-align: center;
+  float: right;
+}
+
+#family {
+  margin-left:435px;
+  width: 400px;
+  height: 250px;
+  margin-top: 50px;
+}
+
