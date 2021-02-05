@@ -52,20 +52,31 @@ Store.prototype.renderStores = function () {
 function renderHeader() {
   let head = document.getElementById('cookieHead');
   let td = document.createElement('td');
+  let foot = document.creatElement('tf');
   td.textContent = '';
   head.appendChild(td);
+  let grandTotal = 0;
   for (let i = 0; i < hours.length; i++) {
     td = document.createElement('td');
+    let cookieHour = 0;
+    for (let j = 0; j < allStores.length; j++){
+      cookieHour += allStores[j].hourlyTotal[i];
+    }
+    head.textContent = cookieHour;
+    grandTotal += cookieHour;
     td.textContent = hours[i];
     head.appendChild(td);
+    let foot = document.createElement('foot');
+    sales.appendChild(foot)
+    console.log(grandTotal);
   };
-  // td = document.createElement('td');
-  // td.textContent = ;
-  }
+}
+
 
 renderHeader();
 new Store('Seattle', 23, 65, 6.3);
 new Store('Paris', 20, 38, 2.3);
-new Store('Toyko', 3 ,24, 1.2);
+new Store('Toyko', 3, 24, 1.2);
 new Store('Lima', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);
+
