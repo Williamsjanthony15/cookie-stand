@@ -30,10 +30,50 @@ td {
 }
 
 #title {
-  font-size: 100px;
-  margin-top: 100px;
+  font-size: 75px;
+  margin-top: 150px;
+}
+#href {
+  font-size: 25px;
+  font-style: italic;
+  text-decoration: none;
+  text-emphasis: none;
+  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
+#Hseattle{
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 125px;
+  /* margin-bottom:50px; */
+  margin-top: 100px;
+}
+#Hparis{
+  font-size: 25px;
+  font-style: italic;
+  text-align:left;
+  margin-left: 150px;
+  margin-bottom: 0px;
+}
+#Htoyko{
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 175px;
+  margin-bottom: 30px;
+}
+#Hlima{
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+#Hdubai{
+  font-size: 25px;
+  font-style: italic;
+  margin-left: 225px;
+  margin-bottom: 30px;
+}
 #salmon {
   width: 400px;
   height: 200px;
@@ -42,7 +82,8 @@ td {
 #chinook {
   width: 400px;;
   height: 200px;
-  float:right;
+  float: right;
+  margin-left: 175px;
 }
 
 #seattle {
@@ -124,11 +165,21 @@ td {
   float: right;
 }
 
-#href {
+
+#Sales {
+  text-align: center;
   font-size: 50px;
   font-style: italic;
-  text-decoration: none;
-  text-emphasis: none;
-  text-align: center;
 }
 
+#cookieSales {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+#home {
+  font-size: 50px;
+  margin-left: 550px;
+  margin-top:300px;
+  text-decoration: none;
+}
