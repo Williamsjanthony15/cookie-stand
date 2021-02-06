@@ -1,12 +1,21 @@
-* {
-  background-color: lightgrey
-
+#index {
+  background-color: bisque;
+}
+#salesPage {
+  background-color: lightgrey;
 }
 h1 {
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
   font-size: large;
+  color: black
 }
+#cookieSales {
+  background-color: rgb(31, 31, 31);
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
 thead, tbody, tr, td, tfoot {
   border:1px solid black;
   /* padding: 30px */
@@ -15,19 +24,18 @@ thead, tbody, tr, td, tfoot {
   padding:5px;
 }
 
-thead {
-  font-style: italic;
-}
 
-tbody {
+ tbody {
   color: red;
+  background-color: darkslategray;
   font-style: italic;
   font-size: xx-large;
 }
 
 td {
-  color: black;
-}
+  color: salmon;
+  font-family: Arial, Helvetica, sans-serif;
+} 
 
 #title {
   font-size: 75px;
@@ -42,9 +50,13 @@ td {
   margin-bottom: 50px;
 }
 
+body {
+  color: darkgreen;
+}
 #Hseattle{
   font-size: 25px;
   font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
   margin-left: 125px;
   /* margin-bottom:50px; */
   margin-top: 100px;
@@ -52,6 +64,7 @@ td {
 #Hparis{
   font-size: 25px;
   font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
   text-align:left;
   margin-left: 150px;
   margin-bottom: 0px;
@@ -59,18 +72,21 @@ td {
 #Htoyko{
   font-size: 25px;
   font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
   margin-left: 175px;
   margin-bottom: 30px;
 }
 #Hlima{
   font-size: 25px;
   font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
   margin-left: 200px;
   margin-bottom: 30px;
 }
 #Hdubai{
   font-size: 25px;
   font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
   margin-left: 225px;
   margin-bottom: 30px;
 }
@@ -88,6 +104,7 @@ td {
 
 #seattle {
   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 10em;
   margin-left: 450px;
   max-width: 500px;
@@ -96,6 +113,7 @@ td {
 }
 #paris {
   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 50px;
   margin-left: 450px;
   max-width: 500px;
@@ -134,6 +152,7 @@ td {
 
 #toyko {
   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 100px;
   margin-left: 450px;
   max-width: 500px;
@@ -143,6 +162,7 @@ td {
 
 #lima {
   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 100px;
   margin-left: 30px;
   max-width: 300px;
@@ -158,6 +178,7 @@ td {
 }
 #dubai {
   font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 100px;
   margin-right: 50px;
   max-width: 300px;
@@ -169,13 +190,11 @@ td {
 #Sales {
   text-align: center;
   font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
   font-style: italic;
 }
 
-#cookieSales {
-  margin-top: 50px;
-  margin-left: 50px;
-}
+
 
 #home {
   font-size: 50px;

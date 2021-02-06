@@ -52,23 +52,12 @@ Store.prototype.renderStores = function () {
 function renderHeader() {
   let head = document.getElementById('cookieHead');
   let td = document.createElement('td');
-  let foot = document.creatElement('tf');
   td.textContent = '';
   head.appendChild(td);
-  let grandTotal = 0;
   for (let i = 0; i < hours.length; i++) {
     td = document.createElement('td');
-    let cookieHour = 0;
-    for (let j = 0; j < allStores.length; j++){
-      cookieHour += allStores[j].hourlyTotal[i];
-    }
-    head.textContent = cookieHour;
-    grandTotal += cookieHour;
     td.textContent = hours[i];
     head.appendChild(td);
-    let foot = document.createElement('foot');
-    sales.appendChild(foot)
-    console.log(grandTotal);
   };
 }
 
