@@ -7,7 +7,20 @@ const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm',
 const allStores = [];
 let footerTotals = [];
 let grandTotal = 0;
+let myForm = document.getElementById('customSales');
 
+function handleSubmit(event) {
+  event.preventDefault();
+
+  var firstName = event.target.firstname.value;
+  console.log(firstName);
+
+  var lastName = event.target.lastName.value;
+  console.log(lastName);
+
+  var location = event.target.location.value;
+  console.log(location);
+}
 function Store(location, minCustHour, maxCustHour, avgSoldCust) {
   this.location = location;
   this.minCustHour = minCustHour;
