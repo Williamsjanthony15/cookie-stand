@@ -7,20 +7,9 @@ const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm',
 const allStores = [];
 let footerTotals = [];
 let grandTotal = 0;
-let myForm = document.getElementById('customSales');
 
-function handleSubmit(event) {
-  event.preventDefault();
+let myForm = document.getElementById('cookieJar');
 
-  var firstName = event.target.firstname.value;
-  console.log(firstName);
-
-  var lastName = event.target.lastName.value;
-  console.log(lastName);
-
-  var location = event.target.location.value;
-  console.log(location);
-}
 function Store(location, minCustHour, maxCustHour, avgSoldCust) {
   this.location = location;
   this.minCustHour = minCustHour;
@@ -113,6 +102,40 @@ function calcFooterTotals() {
     console.log(grandTotal);
   }
 }
+// let dailyLocationTotal = 0;
+// for (let i = 0; i < hours.length; i++) {
+//   let hourlyTotal = 0;
+//   console.log('Here we go');
+//   for (let j = 0; j < allStores.length; j++) {
+//     hourlyTotal += allStores[j].calcLocTotal[i];
+//     console.log('now im here');
+//   }
+
+//   let td = document.createElement('td');
+//   td.textContent = hourlyTotal;
+//   tr.appendChild(td);
+//   dailyLocationTotal += hourlyTotal;
+// }
+
+// let td = document.createElement('td');
+// td.textContent = dailyLocationTotal;
+// tr.appendChild(td);
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let storeLocations = event.target.storeLocations.value;
+  let minCustHour = +event.target.minCustHour.value;
+  let maxCustHour = +event.target.maxCustHour.value;
+  let avgSoldCust = +event.target.avgSoldCust.value;
+
+  let newStand = new Store(storeLocations, minCustHour, maxCustHour, avgSoldCust);
+  newStand.render();
+};
+
+
+
+
 
 new Store('Seattle', 23, 65, 6.3);
 new Store('Paris', 20, 38, 2.3);
@@ -121,4 +144,3 @@ new Store('Lima', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);
 renderHeader();
 renderFooter();
-
