@@ -102,24 +102,24 @@ function calcFooterTotals() {
     console.log(grandTotal);
   }
 }
-// let dailyLocationTotal = 0;
-// for (let i = 0; i < hours.length; i++) {
-//   let hourlyTotal = 0;
-//   console.log('Here we go');
-//   for (let j = 0; j < allStores.length; j++) {
-//     hourlyTotal += allStores[j].calcLocTotal[i];
-//     console.log('now im here');
-//   }
+let dailyLocationTotal = 0;
+for (let i = 0; i < hours.length; i++) {
+  let hourlyTotal = 0;
+  console.log('Here we go');
+  for (let j = 0; j < allStores.length; j++) {
+    hourlyTotal += allStores[j].calcLocTotal[i];
+    console.log('now im here');
+  }
 
-//   let td = document.createElement('td');
-//   td.textContent = hourlyTotal;
-//   tr.appendChild(td);
-//   dailyLocationTotal += hourlyTotal;
-// }
+  let td = document.createElement('td');
+  td.textContent = hourlyTotal;
+  tr.appendChild(td);
+  dailyLocationTotal += hourlyTotal;
+}
 
-// let td = document.createElement('td');
-// td.textContent = dailyLocationTotal;
-// tr.appendChild(td);
+let td = document.createElement('td');
+td.textContent = dailyLocationTotal;
+tr.appendChild(td);
 
 
 function handleSubmit(event) {
@@ -131,8 +131,10 @@ function handleSubmit(event) {
 
   let newStand = new Store(storeLocations, minCustHour, maxCustHour, avgSoldCust);
   newStand.render();
-};
 
+tfoot.removeChild(tfoot.firstChild);
+renderFooter();
+}
 
 
 
@@ -142,5 +144,13 @@ new Store('Paris', 20, 38, 2.3);
 new Store('Toyko', 3, 24, 1.2);
 new Store('Lima', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);
+
+function renderAll() {
+  for (let i = 0; i < allStores.length; i++) {
+    allstores[i].render();
+  }
+}
 renderHeader();
 renderFooter();
+
+myForm.addEventListener('submit', handleSubmit);
