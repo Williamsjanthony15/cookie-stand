@@ -106,7 +106,7 @@ function calcFooterTotals() {
 function handleSubmit(event) {
   event.preventDefault();
 
-  let locations = event.target.location.value;
+  let locations = event.target.locations.value;
   let minCustHour = +event.target.minCustHour.value;
   let maxCustHour = +event.target.maxCustHour.value;
   let avgSoldCust = +event.target.avgSoldCust.value;
@@ -116,9 +116,8 @@ function handleSubmit(event) {
   console.log(maxCustHour);
   console.log(avgSoldCust);
 
-  let newStand = new Store(locations, minCustHour, maxCustHour, avgSoldCust);
+  new Store(locations, minCustHour, maxCustHour, avgSoldCust);
 
-  newStand.render();
 }
 
 new Store('Seattle', 23, 65, 6.3);
