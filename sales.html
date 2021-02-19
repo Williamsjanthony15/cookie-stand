@@ -11,18 +11,26 @@
     <h1 id="Sales"> Salmon Cookies Sales</h1>
 
   <form id ="cookieJar">
-    <fieldset>
-      
-      <label for="Minimum Customers Per Hour">Minimum Customers Per Hour</label>
-      <input type="number" name="Minimum Customers Per Hour" placeholder="Minimum">
 
-      <label for="Maximum Customers Per Hour">Maximum Customers per Hour</label>
-      <input type="number" name="Maximum Customers Per Hour" placeholder="Maximum"> 
-      
-      <label for = "locations">Store Locations</label>
-      <input type="string" name="locations" placeholder="Locations">
-      </select>
-      
+    <fieldset>
+        <legend>Store Submission Form </legend>
+
+      <label for="Minimum Customers Per Hour">Minimum Customers Per Hour
+       <input type="number" name="minCustHour" placeholder="Minimum">
+      </label>
+
+      <label for="Maximum Customers Per Hour">Maximum Customers per Hour
+      <input type="number" name="maxCustHour" placeholder="Maximum"> 
+      </label>
+
+        <label for="Average Cookies Per Customer">Average Cookies Per Customer
+        <input type="number" name="avgSoldCust" placeholder="Average">
+        </label>
+
+        <label for = "locations">Store Locations
+        <input type="string" name="locations" placeholder="Locations">
+      </label>
+
       <button type="submit">Submit</button>
 
     </fieldset>

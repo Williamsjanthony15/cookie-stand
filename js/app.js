@@ -4,7 +4,7 @@ console.log('Hello World');
 
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-const allStores = [];
+let allStores = [];
 let footerTotals = [];
 let grandTotal = 0;
 
@@ -95,13 +95,13 @@ function calcFooterTotals() {
     let hourTotal = 0;
     for (let j = 0; j < allStores.length; j++) {
       hourTotal += allStores[j].hourlyTotal[i];
-
     }
     footerTotals.push(hourTotal);
     grandTotal += hourTotal;
     console.log(grandTotal);
   }
 }
+
 let dailyLocationTotal = 0;
 for (let i = 0; i < hours.length; i++) {
   let hourlyTotal = 0;
@@ -122,22 +122,29 @@ td.textContent = dailyLocationTotal;
 tr.appendChild(td);
 
 
+
 function handleSubmit(event) {
   event.preventDefault();
-  let storeLocations = event.target.storeLocations.value;
+
+  let locations = event.target.locations.value;
   let minCustHour = +event.target.minCustHour.value;
   let maxCustHour = +event.target.maxCustHour.value;
   let avgSoldCust = +event.target.avgSoldCust.value;
 
+
+  console.log(locations);
+  console.log(minCustHour);
+  console.log(maxCustHour);
+  console.log(avgSoldCust);
+
   let newStand = new Store(storeLocations, minCustHour, maxCustHour, avgSoldCust);
   newStand.render();
 
-tfoot.removeChild(tfoot.firstChild);
-renderFooter();
+  tfoot.removeChild(tfoot.firstChild);
+  renderFooter();
 }
-
-
-
+new Store(locations, minCustHour, maxCustHour, avgSoldCust);
+}
 
 new Store('Seattle', 23, 65, 6.3);
 new Store('Paris', 20, 38, 2.3);
@@ -146,10 +153,16 @@ new Store('Lima', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);
 
 function renderAll() {
-  for (let i = 0; i < allStores.length; i++) {
-    allstores[i].render();
+  for (let i = 0; i < grandTotal.length; i++) {
+    grandTotal[i].render();
   }
 }
+renderAll();
+  for (let i = 0; i < allStores.length; i++) {
+    allStores[i].render();
+  }
+}
+renderAll();
 renderHeader();
 renderFooter();
 
