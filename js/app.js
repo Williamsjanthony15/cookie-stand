@@ -102,6 +102,26 @@ function calcFooterTotals() {
   }
 }
 
+let dailyLocationTotal = 0;
+for (let i = 0; i < hours.length; i++) {
+  let hourlyTotal = 0;
+  console.log('Here we go');
+  for (let j = 0; j < allStores.length; j++) {
+    hourlyTotal += allStores[j].calcLocTotal[i];
+    console.log('now im here');
+  }
+
+  let td = document.createElement('td');
+  td.textContent = hourlyTotal;
+  tr.appendChild(td);
+  dailyLocationTotal += hourlyTotal;
+}
+
+let td = document.createElement('td');
+td.textContent = dailyLocationTotal;
+tr.appendChild(td);
+
+
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -111,13 +131,19 @@ function handleSubmit(event) {
   let maxCustHour = +event.target.maxCustHour.value;
   let avgSoldCust = +event.target.avgSoldCust.value;
 
+
   console.log(locations);
   console.log(minCustHour);
   console.log(maxCustHour);
   console.log(avgSoldCust);
 
-  new Store(locations, minCustHour, maxCustHour, avgSoldCust);
+  let newStand = new Store(storeLocations, minCustHour, maxCustHour, avgSoldCust);
+  newStand.render();
 
+  tfoot.removeChild(tfoot.firstChild);
+  renderFooter();
+}
+new Store(locations, minCustHour, maxCustHour, avgSoldCust);
 }
 
 new Store('Seattle', 23, 65, 6.3);
@@ -132,6 +158,10 @@ function renderAll() {
   }
 }
 renderAll();
+  for (let i = 0; i < allStores.length; i++) {
+    allstores[i].render();
+  }
+}
 renderHeader();
 renderFooter();
 
