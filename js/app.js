@@ -4,7 +4,7 @@ console.log('Hello World');
 
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-const allStores = [];
+let allStores = [];
 let footerTotals = [];
 let grandTotal = 0;
 
@@ -159,9 +159,10 @@ function renderAll() {
 }
 renderAll();
   for (let i = 0; i < allStores.length; i++) {
-    allstores[i].render();
+    allStores[i].render();
   }
 }
+renderAll();
 renderHeader();
 renderFooter();
 
