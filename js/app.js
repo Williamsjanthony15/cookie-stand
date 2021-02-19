@@ -4,7 +4,7 @@ console.log('Hello World');
 
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-let allStores = [];
+const allStores = [];
 let footerTotals = [];
 let grandTotal = 0;
 
@@ -102,26 +102,6 @@ function calcFooterTotals() {
   }
 }
 
-let dailyLocationTotal = 0;
-for (let i = 0; i < hours.length; i++) {
-  let hourlyTotal = 0;
-  console.log('Here we go');
-  for (let j = 0; j < allStores.length; j++) {
-    hourlyTotal += allStores[j].calcLocTotal[i];
-    console.log('now im here');
-  }
-
-  let td = document.createElement('td');
-  td.textContent = hourlyTotal;
-  tr.appendChild(td);
-  dailyLocationTotal += hourlyTotal;
-}
-
-let td = document.createElement('td');
-td.textContent = dailyLocationTotal;
-tr.appendChild(td);
-
-
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -131,19 +111,13 @@ function handleSubmit(event) {
   let maxCustHour = +event.target.maxCustHour.value;
   let avgSoldCust = +event.target.avgSoldCust.value;
 
-
   console.log(locations);
   console.log(minCustHour);
   console.log(maxCustHour);
   console.log(avgSoldCust);
 
-  let newStand = new Store(storeLocations, minCustHour, maxCustHour, avgSoldCust);
-  newStand.render();
+  new Store(locations, minCustHour, maxCustHour, avgSoldCust);
 
-  tfoot.removeChild(tfoot.firstChild);
-  renderFooter();
-}
-new Store(locations, minCustHour, maxCustHour, avgSoldCust);
 }
 
 new Store('Seattle', 23, 65, 6.3);
@@ -155,11 +129,6 @@ new Store('Dubai', 11, 38, 3.7);
 function renderAll() {
   for (let i = 0; i < grandTotal.length; i++) {
     grandTotal[i].render();
-  }
-}
-renderAll();
-  for (let i = 0; i < allStores.length; i++) {
-    allStores[i].render();
   }
 }
 renderAll();
