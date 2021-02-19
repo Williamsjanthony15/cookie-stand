@@ -95,52 +95,45 @@ function calcFooterTotals() {
     let hourTotal = 0;
     for (let j = 0; j < allStores.length; j++) {
       hourTotal += allStores[j].hourlyTotal[i];
-
     }
     footerTotals.push(hourTotal);
     grandTotal += hourTotal;
     console.log(grandTotal);
   }
 }
-// let dailyLocationTotal = 0;
-// for (let i = 0; i < hours.length; i++) {
-//   let hourlyTotal = 0;
-//   console.log('Here we go');
-//   for (let j = 0; j < allStores.length; j++) {
-//     hourlyTotal += allStores[j].calcLocTotal[i];
-//     console.log('now im here');
-//   }
-
-//   let td = document.createElement('td');
-//   td.textContent = hourlyTotal;
-//   tr.appendChild(td);
-//   dailyLocationTotal += hourlyTotal;
-// }
-
-// let td = document.createElement('td');
-// td.textContent = dailyLocationTotal;
-// tr.appendChild(td);
 
 
 function handleSubmit(event) {
   event.preventDefault();
-  let storeLocations = event.target.storeLocations.value;
+
+  let locations = event.target.location.value;
   let minCustHour = +event.target.minCustHour.value;
   let maxCustHour = +event.target.maxCustHour.value;
   let avgSoldCust = +event.target.avgSoldCust.value;
 
-  let newStand = new Store(storeLocations, minCustHour, maxCustHour, avgSoldCust);
+  console.log(locations);
+  console.log(minCustHour);
+  console.log(maxCustHour);
+  console.log(avgSoldCust);
+
+  let newStand = new Store(locations, minCustHour, maxCustHour, avgSoldCust);
+
   newStand.render();
-};
-
-
-
-
+}
 
 new Store('Seattle', 23, 65, 6.3);
 new Store('Paris', 20, 38, 2.3);
 new Store('Toyko', 3, 24, 1.2);
 new Store('Lima', 2, 16, 4.6);
 new Store('Dubai', 11, 38, 3.7);
+
+function renderAll() {
+  for (let i = 0; i < grandTotal.length; i++) {
+    grandTotal[i].render();
+  }
+}
+renderAll();
 renderHeader();
 renderFooter();
+
+myForm.addEventListener('submit', handleSubmit);
