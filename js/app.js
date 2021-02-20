@@ -98,7 +98,6 @@ function calcFooterTotals() {
     }
     footerTotals.push(hourTotal);
     grandTotal += hourTotal;
-    console.log(grandTotal);
   }
 }
 
@@ -111,13 +110,9 @@ function handleSubmit(event) {
   let maxCustHour = +event.target.maxCustHour.value;
   let avgSoldCust = +event.target.avgSoldCust.value;
 
-  console.log(locations);
-  console.log(minCustHour);
-  console.log(maxCustHour);
-  console.log(avgSoldCust);
-
   new Store(locations, minCustHour, maxCustHour, avgSoldCust);
-
+  document.getElementById('cookieSales').deleteRow(-1);
+  renderFooter();
 }
 
 new Store('Seattle', 23, 65, 6.3);
